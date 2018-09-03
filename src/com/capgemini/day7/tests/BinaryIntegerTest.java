@@ -13,7 +13,7 @@ class BinaryIntegerTest {
 	
 		@Test
 		void testBinaryInteger() {
-			File file = new File("C:\\Naina\\Naveena.txt");
+			File file = new File("C:\\Naina\\sathya.txt");
 			assertEquals(1,BinaryInteger.writeBinary(file));
 		}
 

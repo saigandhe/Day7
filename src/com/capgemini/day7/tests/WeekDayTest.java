@@ -10,7 +10,7 @@ class WeekDayTest {
 
 	@Test
 	void test() {
-		assertEquals("Saturday,September 01,2018",WeekDay.displayWeekDay());
+		assertEquals("Monday,September 03,2018",WeekDay.displayWeekDay());
 		 
 	}
 

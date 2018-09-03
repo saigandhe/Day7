@@ -7,10 +7,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Vowels {
-	static int count;
-	static int count1;
+	static int count = 0;
+	static int count1 = 0;
 	
-	public static int countVowels(File file) throws FileNotFoundException,IOException {
+	public static String countVowels(File file) throws FileNotFoundException,IOException {
 		
 		
 		try(FileReader filereader = new FileReader(file);
@@ -21,14 +21,17 @@ public class Vowels {
 					for(int i=0;i<s.length();i++)
 					{
 						char c=s.charAt(i);
-					if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
-					{
-						count=count+1;
-					}
-					else
-					{
-						count1=count+1;
-					}
+						if(c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' ) {
+							if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+							{
+								count=count+1;
+							}
+							else
+							{
+								count1=count1+1;
+							}
+						
+						}
 					}
 				}
 							
@@ -36,10 +39,16 @@ public class Vowels {
 				{
 					e.printStackTrace();
 				}
-				return count-1;
-				
+		System.out.println("Vowels is "+count+"consonants is"+count1);
+				return "Vowels is "+count+ "consonants is" +count1	;			
 			}
 	
+
+	private static char charAt(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 	@Override
 	public String toString() {

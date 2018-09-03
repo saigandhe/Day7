@@ -15,7 +15,7 @@ class VowelsAndConsonantsTest {
 	@Test
 	void test() throws FileNotFoundException,IOException{
 		File file=new File("C:\\Naina\\Naveena.txt");
-		assertEquals(4, Vowels.countVowels(file));
+		assertEquals("Vowels is 5consonants is4", Vowels.countVowels(file));
 		
 	}
 }
