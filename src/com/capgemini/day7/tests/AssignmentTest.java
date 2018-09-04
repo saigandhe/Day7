@@ -2,34 +2,43 @@ package com.capgemini.day7.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.File;
 import java.time.LocalDate;
+import java.util.LinkedList;
 
 import org.junit.jupiter.api.Test;
 
 import com.capgemini.day7.files.Assignment;
 
+
+
 class AssignmentTest {
 
 	@Test
 	void test() {
-		Assignment a1 =new Assignment("C",LocalDate.of(2012, 06, 15));
-		Assignment a2 =new Assignment("java",LocalDate.of(2018, 07, 16));
-		Assignment a3 =new Assignment("oracle",LocalDate.of(2016, 06, 12));
-		Assignment a4 =new Assignment("dsp",LocalDate.of(2018, 10, 25));
-	
-	assertEquals(true,Assignment.adding(a1));
-	assertEquals(true,Assignment.adding(a2));
-	assertEquals(true,Assignment.adding(a3));
-	assertEquals(true,Assignment.adding(a4));
-	
-
-	assertEquals(true,Assignment.remove(a4));
-	
-	Assignment.show();
-		System.out.println("\n");
 		
-	assertEquals(a1,Assignment.search());	
- }
-
+		File f1=new File("C:\\saigandhe\\subject1.txt");
+		File f2=new File("C:\\saigandhe\\subject2.txt");
+		File f3=new File("C:\\saigandhe\\subject3.txt");
+		File f4=new File("C:\\saigandhe\\subject4.txt");
+		
+		Assignment a1=new Assignment(f1, LocalDate.of(2018,9,5));
+		Assignment a2=new Assignment(f2, LocalDate.of(2018,9,8));
+		Assignment a3=new Assignment(f3, LocalDate.of(2018,9,6));
+		Assignment a4=new Assignment(f4, LocalDate.of(2018,9,10));
+		
+		assertEquals(true,Assignment.adding(a1));
+		assertEquals(true,Assignment.adding(a2));
+		assertEquals(true,Assignment.adding(a3));
+		assertEquals(true,Assignment.adding(a4));
+		
+		assertEquals(true,Assignment.remove(a4));
+		
+		Assignment.show();
+			System.out.println("\n");
+			
+		assertEquals(a1,Assignment.search());	
+	 }
 
 }
+
